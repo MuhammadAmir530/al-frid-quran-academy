@@ -98,7 +98,7 @@ const DEFAULT_TEACHERS = [
   },
   {
     id: 2,
-    name: 'Ustadh Ahmad Bilal',
+    name: 'Qari Hussnain Faridi',
     title: 'Quran Memorization Specialist',
     specialization: 'Hifz ul Quran, Tajweed',
     experience: '12+ Years',
@@ -108,7 +108,7 @@ const DEFAULT_TEACHERS = [
   },
   {
     id: 3,
-    name: 'Sister Maryam Fatima',
+    name: 'Umme Muhammad Sahiba',
     title: 'Female Quran Teacher',
     specialization: 'Nazra, Tajweed, Arabic',
     experience: '8+ Years',
@@ -227,44 +227,12 @@ const DEFAULT_TESTIMONIALS = [
   },
 ];
 
-const CURRENT_VERSION = 'v3';
-if (localStorage.getItem('alfrid_data_version') !== CURRENT_VERSION) {
-  localStorage.removeItem('alfrid_courses');
-  localStorage.removeItem('alfrid_teachers');
-  localStorage.removeItem('alfrid_fees');
-  localStorage.setItem('alfrid_data_version', CURRENT_VERSION);
-}
-
 export function DataProvider({ children }) {
-  const [courses, setCourses] = useState(() => {
-    const saved = localStorage.getItem('alfrid_courses');
-    return saved ? JSON.parse(saved) : DEFAULT_COURSES;
-  });
-
-  const [teachers, setTeachers] = useState(() => {
-    const saved = localStorage.getItem('alfrid_teachers');
-    return saved ? JSON.parse(saved) : DEFAULT_TEACHERS;
-  });
-
-  const [feeStructure, setFeeStructure] = useState(() => {
-    const saved = localStorage.getItem('alfrid_fees');
-    return saved ? JSON.parse(saved) : DEFAULT_FEE_STRUCTURE;
-  });
-
+  const [courses, setCourses] = useState(DEFAULT_COURSES);
+  const [teachers, setTeachers] = useState(DEFAULT_TEACHERS);
+  const [feeStructure, setFeeStructure] = useState(DEFAULT_FEE_STRUCTURE);
   const [stats] = useState(DEFAULT_STATS);
   const [testimonials] = useState(DEFAULT_TESTIMONIALS);
-
-  useEffect(() => {
-    localStorage.setItem('alfrid_courses', JSON.stringify(courses));
-  }, [courses]);
-
-  useEffect(() => {
-    localStorage.setItem('alfrid_teachers', JSON.stringify(teachers));
-  }, [teachers]);
-
-  useEffect(() => {
-    localStorage.setItem('alfrid_fees', JSON.stringify(feeStructure));
-  }, [feeStructure]);
 
   const addCourse = (course) => {
     const newCourse = { ...course, id: Date.now() };
