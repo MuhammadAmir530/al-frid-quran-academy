@@ -94,7 +94,7 @@ const DEFAULT_TEACHERS = [
     experience: '20+ Years',
     students: '500+',
     description: 'A distinguished Islamic scholar and Hafiz-e-Quran with PhD in Islamic Studies. Founder of Al-Frid Online Qur\'an Institution with 20+ years of teaching experience.',
-    image: '/teacher-default.png',
+    image: '/dr-fridi.jpg',
   },
   {
     id: 2,
