@@ -43,7 +43,7 @@
 /* Scroll to Top */
 .scroll-top {
   position: fixed;
-  bottom: 30px;
+  bottom: 85px;
   left: 28px;
   z-index: 999;
   width: 44px;
@@ -63,6 +63,39 @@
 .scroll-top:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 24px rgba(15,61,34,0.5);
+}
+
+/* Agency Floating Badge */
+.agency-badge {
+  position: fixed;
+  bottom: 30px;
+  left: 28px;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  color: #0f3d22;
+  padding: 10px 18px;
+  border-radius: var(--radius-full, 50px);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(15, 61, 34, 0.1);
+  transition: all 0.3s ease;
+  animation: fadeIn 0.5s ease;
+}
+
+.agency-badge:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  background: #f4faf6;
+}
+
+.agency-badge span.agency-icon {
+  font-size: 1.1rem;
+  line-height: 1;
 }
 
 @keyframes fadeIn {

@@ -77,6 +77,18 @@ function AppContent() {
           ↑
         </button>
       )}
+
+      {/* Agency Badge */}
+      <a 
+        href="https://wa.me/923457685122" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        className="agency-badge"
+        aria-label="Built by KHR Digital Labs"
+      >
+        <span className="agency-icon">⚡</span> 
+        <span className="agency-text">Built by KHR Labs</span>
+      </a>
     </>
   );
 }
