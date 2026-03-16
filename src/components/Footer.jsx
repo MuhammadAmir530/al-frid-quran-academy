@@ -111,6 +111,9 @@ export default function Footer() {
         <div className="container footer__bottom-inner">
           <p>© {year} Al-Frid Online Qur'an Institution. All rights reserved.</p>
           <p>Founded by <strong>Dr. Mufti Hafiz Ali Hassan Fridi</strong> · Made with ❤️ for the Ummah</p>
+          <p style={{ marginTop: '0.5rem', fontSize: '0.9em', opacity: 0.8 }}>
+            Developed by <a href="https://wa.me/923457685122" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'underline', fontWeight: 500 }}>KHR Digital Labs</a>
+          </p>
         </div>
       </div>
     </footer>
