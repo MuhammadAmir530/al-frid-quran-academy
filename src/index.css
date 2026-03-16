@@ -1,0 +1,296 @@
+/* ═══════════════════════════════════════════════
+   AL-FRID ONLINE QUR'AN INSTITUTION
+   Global Styles & Design System
+═══════════════════════════════════════════════ */
+
+:root {
+  /* Primary Colors - Islamic Emerald Green */
+  --green-950: #0a2e1a;
+  --green-900: #0f3d22;
+  --green-800: #145228;
+  --green-700: #1a6b32;
+  --green-600: #1e7a38;
+  --green-500: #238c41;
+  --green-400: #2da651;
+  --green-300: #4cc06a;
+  --green-200: #86d9a0;
+  --green-100: #c2f0d0;
+
+  /* Gold Accent Colors */
+  --gold-900: #7a5c00;
+  --gold-700: #b38600;
+  --gold-500: #d4af37;
+  --gold-400: #e2c25a;
+  --gold-300: #ecd07a;
+  --gold-200: #f4e0a8;
+  --gold-100: #faf3d6;
+
+  /* Neutral Colors */
+  --white: #ffffff;
+  --gray-50: #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-300: #d1d5db;
+  --gray-400: #9ca3af;
+  --gray-500: #6b7280;
+  --gray-600: #4b5563;
+  --gray-700: #374151;
+  --gray-800: #1f2937;
+  --gray-900: #111827;
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #0f3d22 0%, #1e7a38 50%, #1a6b32 100%);
+  --gradient-gold: linear-gradient(135deg, #b38600 0%, #d4af37 50%, #e2c25a 100%);
+  --gradient-hero: linear-gradient(135deg, rgba(10,46,26,0.95) 0%, rgba(21,89,49,0.88) 60%, rgba(30,122,56,0.80) 100%);
+  --gradient-card: linear-gradient(145deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%);
+  --gradient-section: linear-gradient(180deg, #f9fafb 0%, #f3f8f5 100%);
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.10);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,0.14);
+  --shadow-xl: 0 16px 48px rgba(0,0,0,0.18);
+  --shadow-gold: 0 4px 20px rgba(212,175,55,0.25);
+  --shadow-green: 0 4px 20px rgba(30,122,56,0.25);
+
+  /* Typography */
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
+  --font-arabic: 'Amiri', serif;
+
+  /* Border Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.3s ease;
+  --transition-slow: 0.5s ease;
+}
+
+/* ── Reset ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--gray-800);
+  background-color: var(--white);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ── Typography ── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  line-height: 1.2;
+  color: var(--gray-900);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: var(--font-body);
+}
+
+input, textarea, select {
+  font-family: var(--font-body);
+}
+
+/* ── Utility Classes ── */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 700;
+  color: var(--green-900);
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.section-subtitle {
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  color: var(--gray-500);
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 60px;
+  line-height: 1.7;
+}
+
+.section-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 18px;
+  background: linear-gradient(135deg, rgba(212,175,55,0.12), rgba(212,175,55,0.06));
+  border: 1px solid rgba(212,175,55,0.35);
+  border-radius: var(--radius-full);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--gold-700);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 32px;
+  background: var(--gradient-gold);
+  color: var(--green-950);
+  font-weight: 700;
+  font-size: 0.95rem;
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-gold);
+  transition: transform var(--transition-base), box-shadow var(--transition-base), filter var(--transition-base);
+  letter-spacing: 0.3px;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(212,175,55,0.4);
+  filter: brightness(1.05);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 32px;
+  background: transparent;
+  color: var(--white);
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: 2px solid rgba(255,255,255,0.6);
+  border-radius: var(--radius-full);
+  transition: all var(--transition-base);
+}
+
+.btn-secondary:hover {
+  background: rgba(255,255,255,0.12);
+  border-color: var(--white);
+  transform: translateY(-2px);
+}
+
+.btn-green {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  background: var(--gradient-primary);
+  color: var(--white);
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-green);
+  transition: all var(--transition-base);
+}
+
+.btn-green:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(30,122,56,0.4);
+}
+
+/* ── Arabesque Pattern ── */
+.arabesque-divider {
+  text-align: center;
+  margin: 16px 0;
+  color: var(--gold-500);
+  font-size: 1.4rem;
+  letter-spacing: 6px;
+  opacity: 0.7;
+}
+
+/* ── Scroll Animations ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--gray-100);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--green-600);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--green-700);
+}
+
+/* ── Selection ── */
+::selection {
+  background: rgba(212,175,55,0.3);
+  color: var(--green-900);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+}
