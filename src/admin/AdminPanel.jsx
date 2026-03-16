@@ -4,8 +4,7 @@ import AdminCourses from './AdminCourses';
 import AdminTeachers from './AdminTeachers';
 import AdminFees from './AdminFees';
 import './AdminPanel.css';
-
-const ADMIN_PASSWORD = 'alfrid2024';
+const ADMIN_PASSWORD = import.meta.env.VITE_ADMIN_PASSWORD || 'Aqsa@786!alfrid';
 
 export default function AdminPanel({ onClose }) {
   const [authenticated, setAuthenticated] = useState(false);
