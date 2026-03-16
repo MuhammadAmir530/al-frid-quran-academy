@@ -8,11 +8,9 @@ import FeeStructure from './components/FeeStructure';
 import Teachers from './components/Teachers';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import AdminPanel from './admin/AdminPanel';
 import './App.css';
 
 function AppContent() {
-  const [adminOpen, setAdminOpen] = useState(false);
   const [showScrollTop, setShowScrollTop] = useState(false);
 
   // Scroll reveal animation
@@ -45,7 +43,7 @@ function AppContent() {
 
   return (
     <>
-      <Navbar onAdminClick={() => setAdminOpen(true)} />
+      <Navbar />
 
       <main>
         <Hero />
@@ -79,9 +77,6 @@ function AppContent() {
           ↑
         </button>
       )}
-
-      {/* Admin Panel */}
-      {adminOpen && <AdminPanel onClose={() => setAdminOpen(false)} />}
     </>
   );
 }

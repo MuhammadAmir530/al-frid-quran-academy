@@ -3,7 +3,7 @@ import './Navbar.css';
 
 const WHATSAPP = 'https://wa.me/923007201825';
 
-export default function Navbar({ onAdminClick }) {
+export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -62,9 +62,6 @@ export default function Navbar({ onAdminClick }) {
           <a href={WHATSAPP} target="_blank" rel="noopener noreferrer" className="navbar__cta">
             <span>📱</span> Free Trial
           </a>
-          <button className="navbar__admin-btn" onClick={onAdminClick} title="Admin Panel">
-            ⚙️
-          </button>
         </div>
 
         {/* Hamburger */}
@@ -92,9 +89,6 @@ export default function Navbar({ onAdminClick }) {
         <a href={WHATSAPP} target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ margin: '8px 16px' }}>
           📱 Book Free Trial
         </a>
-        <button className="navbar__admin-mobile-btn" onClick={() => { setMenuOpen(false); onAdminClick(); }}>
-          ⚙️ Admin Panel
-        </button>
       </div>
     </nav>
   );
