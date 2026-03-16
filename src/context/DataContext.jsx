@@ -119,13 +119,13 @@ const DEFAULT_TEACHERS = [
 ];
 
 const DEFAULT_FEE_STRUCTURE = {
-  currency: 'PKR',
+  currency: '',
   plans: [
     {
       id: 1,
       name: 'Basic',
       icon: '🌱',
-      price: 2500,
+      price: '$30 / 5,000 PKR',
       period: 'month',
       classesPerWeek: 3,
       classDuration: '30 mins',
@@ -143,7 +143,7 @@ const DEFAULT_FEE_STRUCTURE = {
       id: 2,
       name: 'Standard',
       icon: '⭐',
-      price: 4000,
+      price: '$45 / 8,000 PKR',
       period: 'month',
       classesPerWeek: 5,
       classDuration: '45 mins',
@@ -163,7 +163,7 @@ const DEFAULT_FEE_STRUCTURE = {
       id: 3,
       name: 'Premium',
       icon: '👑',
-      price: 6000,
+      price: '$60 / 12,000 PKR',
       period: 'month',
       classesPerWeek: 7,
       classDuration: '60 mins',
@@ -227,7 +227,7 @@ const DEFAULT_TESTIMONIALS = [
   },
 ];
 
-const CURRENT_VERSION = 'v2';
+const CURRENT_VERSION = 'v3';
 if (localStorage.getItem('alfrid_data_version') !== CURRENT_VERSION) {
   localStorage.removeItem('alfrid_courses');
   localStorage.removeItem('alfrid_teachers');
