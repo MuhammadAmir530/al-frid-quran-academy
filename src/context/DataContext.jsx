@@ -227,6 +227,14 @@ const DEFAULT_TESTIMONIALS = [
   },
 ];
 
+const CURRENT_VERSION = 'v2';
+if (localStorage.getItem('alfrid_data_version') !== CURRENT_VERSION) {
+  localStorage.removeItem('alfrid_courses');
+  localStorage.removeItem('alfrid_teachers');
+  localStorage.removeItem('alfrid_fees');
+  localStorage.setItem('alfrid_data_version', CURRENT_VERSION);
+}
+
 export function DataProvider({ children }) {
   const [courses, setCourses] = useState(() => {
     const saved = localStorage.getItem('alfrid_courses');
