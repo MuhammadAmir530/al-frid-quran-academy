@@ -27,9 +27,14 @@ export default function FeeStructure() {
               <div className="fee-card__header">
                 <div className="fee-card__icon">{plan.icon}</div>
                 <h3 className="fee-card__name">{plan.name}</h3>
-                <div className="fee-card__price">
-                  <span className="fee-card__currency">{currency}</span>
-                  <span className="fee-card__amount">{plan.price.toLocaleString()}</span>
+                <div
+                  className="fee-card__price"
+                  style={{ fontSize: String(plan.price).length > 8 ? '1.8rem' : '2.5rem', flexWrap: 'wrap' }}
+                >
+                  {currency && <span className="fee-card__currency">{currency}</span>}
+                  <span className="fee-card__amount">
+                    {typeof plan.price === 'number' ? plan.price.toLocaleString() : plan.price}
+                  </span>
                   <span className="fee-card__period">/{plan.period}</span>
                 </div>
                 <p className="fee-card__sub">

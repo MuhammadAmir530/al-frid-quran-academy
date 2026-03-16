@@ -11,7 +11,7 @@ export default function AdminFees() {
       ...prev,
       plans: prev.plans.map(p =>
         p.id === planId
-          ? { ...p, [field]: field === 'price' ? Number(value) : value }
+          ? { ...p, [field]: value }
           : p
       )
     }));
@@ -156,7 +156,7 @@ export default function AdminFees() {
             {[
               ['Plan Name', 'name', 'text'],
               ['Icon (emoji)', 'icon', 'text'],
-              ['Price', 'price', 'number'],
+              ['Price Text', 'price', 'text'],
               ['Period', 'period', 'text'],
               ['Classes/Week', 'classesPerWeek', 'number'],
               ['Class Duration', 'classDuration', 'text'],
