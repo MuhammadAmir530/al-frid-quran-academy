@@ -6,7 +6,6 @@ import About from './components/About';
 import Courses from './components/Courses';
 import FeeStructure from './components/FeeStructure';
 import Teachers from './components/Teachers';
-import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import AdminPanel from './admin/AdminPanel';
@@ -54,7 +53,6 @@ function AppContent() {
         <Courses />
         <FeeStructure />
         <Teachers />
-        <Testimonials />
         <Contact />
       </main>
 
