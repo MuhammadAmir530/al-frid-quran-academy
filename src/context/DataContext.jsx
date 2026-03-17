@@ -98,7 +98,7 @@ const DEFAULT_TEACHERS = [
   },
   {
     id: 2,
-    name: 'Qari Hussnain Faridi',
+    name: 'Qari Hassnain Faridi',
     title: 'Quran Memorization Specialist',
     specialization: 'Hifz ul Quran, Tajweed',
     experience: '12+ Years',
@@ -114,7 +114,7 @@ const DEFAULT_TEACHERS = [
     experience: '8+ Years',
     students: '200+',
     description: 'A qualified female Quran teacher specializing in teaching sisters and children. Expert in Noorani Qaida, Tajweed rules, and Arabic language for beginners.',
-    image: '/teacher-default.png',
+    image: '/female-teacher.png',
   },
 ];
 
